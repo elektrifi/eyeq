@@ -9,11 +9,11 @@ using System.Windows.Forms;
 
 namespace eyeQ
 {
-    public partial class UserControl1 : UserControl
+    public partial class EyeQUserControl1 : UserControl
     {
         Boolean textBoxFirstUse;
 
-        public UserControl1()
+        public EyeQUserControl1()
         {
             InitializeComponent();
             textBoxFirstUse = true;

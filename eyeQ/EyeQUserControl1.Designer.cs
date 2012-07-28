@@ -1,6 +1,6 @@
 ﻿namespace eyeQ
 {
-    partial class UserControl1
+    partial class EyeQUserControl1
     {
         /// <summary>
         /// Required designer variable.
@@ -70,7 +70,7 @@
             this.retrieveProcLbl.Size = new System.Drawing.Size(162, 20);
             this.retrieveProcLbl.Text = "Retrieve Procedure:";
             // 
-            // UserControl1
+            // EyeQUserControl1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -79,7 +79,7 @@
             this.Controls.Add(this.clearBtn);
             this.Controls.Add(this.retrieveProcBtn);
             this.Controls.Add(this.retrieveProcTextBox);
-            this.Name = "UserControl1";
+            this.Name = "EyeQUserControl1";
             this.Size = new System.Drawing.Size(284, 150);
             this.ResumeLayout(false);
 
