@@ -49,6 +49,8 @@
             this.Name = "eyeQForm";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "eyeQ Win32 Form";
+            this.Load += new System.EventHandler(this.eyeQForm_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.eyeQForm_FormClosing);
             this.ResumeLayout(false);
 
         }

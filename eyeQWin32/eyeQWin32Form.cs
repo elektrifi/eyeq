@@ -34,12 +34,12 @@ namespace eyeQWin32
         ////////////////////////////////////////////////////////
         //
         // On Close Event
-        // When the form is closed exit gracefullu
+        // When the form is closed exit gracefully
         //
         ////////////////////////////////////////////////////////
         private void eyeQForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             eyeQUserControl11.CloseServices();
         }
-    }
+     }
 }
