@@ -40,10 +40,14 @@ namespace eyeQ
             clearBtn.Enabled = false;
             textBoxFirstUse = true;
 
+            Console.WriteLine("User Control initialized.\r\n");
         }
 
         public void InitializeServices(int parentWindowHandle)
         {
+            // Debug
+            Console.WriteLine("Connecting to services...\r\n");
+
             //Store the parent handle for later use
             this.parentWindowHandle = parentWindowHandle;
 
@@ -87,6 +91,9 @@ namespace eyeQ
         ////////////////////////////////////////////////////////
         void ServiceManager_OnServiceManagerEvent(IPCMessage ipcMessage)
         {
+            // Debug
+            Console.WriteLine("ServiceManager_OnServiceManagerEvent...\r\n");
+
             //What type of message - ASR or Headtracker
 
             if (ipcMessage.MessageType == MessageType.ASR)

@@ -47,6 +47,7 @@
             this.ClientSize = new System.Drawing.Size(332, 219);
             this.Controls.Add(this.eyeQUserControl11);
             this.Name = "eyeQForm";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "eyeQ Win32 Form";
             this.ResumeLayout(false);
 
