@@ -42,7 +42,7 @@
             this.retrieveProcTextBox.Size = new System.Drawing.Size(226, 23);
             this.retrieveProcTextBox.TabIndex = 0;
             this.retrieveProcTextBox.Text = " ...";
-            this.retrieveProcTextBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.retrieveProcTextBox.TextChanged += new System.EventHandler(this.retrieveProcTextBox_TextChanged);
             // 
             // retrieveProcBtn
             // 
@@ -51,7 +51,7 @@
             this.retrieveProcBtn.Size = new System.Drawing.Size(100, 20);
             this.retrieveProcBtn.TabIndex = 1;
             this.retrieveProcBtn.Text = "Retrieve";
-            this.retrieveProcBtn.Click += new System.EventHandler(this.button1_Click);
+            this.retrieveProcBtn.Click += new System.EventHandler(this.retrieveProcBtn_Click);
             // 
             // clearBtn
             // 
