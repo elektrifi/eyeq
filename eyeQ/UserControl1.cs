@@ -11,14 +11,31 @@ namespace eyeQ
 {
     public partial class UserControl1 : UserControl
     {
+        Boolean textBoxFirstUse;
+
         public UserControl1()
         {
             InitializeComponent();
+            textBoxFirstUse = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            // Clear textBox on first use
+            if (textBoxFirstUse) {
+                retrieveProcTextBox.Text = "";
+                textBoxFirstUse = false;
+            }
+        }
+
+        private void clearBtn_Click(object sender, EventArgs e)
+        {
+            retrieveProcTextBox.Text = "";
         }
     }
 }

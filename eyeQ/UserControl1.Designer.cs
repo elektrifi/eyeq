@@ -28,43 +28,68 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.retrieveBtn = new System.Windows.Forms.Button();
+            this.retrieveProcTextBox = new System.Windows.Forms.TextBox();
+            this.retrieveProcBtn = new System.Windows.Forms.Button();
+            this.clearBtn = new System.Windows.Forms.Button();
+            this.retrieveProcLbl = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textBox1
+            // retrieveProcTextBox
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.textBox1.Location = new System.Drawing.Point(26, 56);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 23);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Text = " ...";
+            this.retrieveProcTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.retrieveProcTextBox.Location = new System.Drawing.Point(26, 56);
+            this.retrieveProcTextBox.Name = "retrieveProcTextBox";
+            this.retrieveProcTextBox.Size = new System.Drawing.Size(226, 23);
+            this.retrieveProcTextBox.TabIndex = 0;
+            this.retrieveProcTextBox.Text = " ...";
+            this.retrieveProcTextBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // retrieveBtn
+            // retrieveProcBtn
             // 
-            this.retrieveBtn.Location = new System.Drawing.Point(26, 105);
-            this.retrieveBtn.Name = "retrieveBtn";
-            this.retrieveBtn.Size = new System.Drawing.Size(100, 20);
-            this.retrieveBtn.TabIndex = 1;
-            this.retrieveBtn.Text = "Retrieve";
-            this.retrieveBtn.Click += new System.EventHandler(this.button1_Click);
+            this.retrieveProcBtn.Location = new System.Drawing.Point(26, 105);
+            this.retrieveProcBtn.Name = "retrieveProcBtn";
+            this.retrieveProcBtn.Size = new System.Drawing.Size(100, 20);
+            this.retrieveProcBtn.TabIndex = 1;
+            this.retrieveProcBtn.Text = "Retrieve";
+            this.retrieveProcBtn.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // clearBtn
+            // 
+            this.clearBtn.Location = new System.Drawing.Point(152, 105);
+            this.clearBtn.Name = "clearBtn";
+            this.clearBtn.Size = new System.Drawing.Size(100, 20);
+            this.clearBtn.TabIndex = 2;
+            this.clearBtn.Text = "Clear";
+            this.clearBtn.Click += new System.EventHandler(this.clearBtn_Click);
+            // 
+            // retrieveProcLbl
+            // 
+            this.retrieveProcLbl.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.retrieveProcLbl.Location = new System.Drawing.Point(26, 33);
+            this.retrieveProcLbl.Name = "retrieveProcLbl";
+            this.retrieveProcLbl.Size = new System.Drawing.Size(162, 20);
+            this.retrieveProcLbl.Text = "Retrieve Procedure:";
             // 
             // UserControl1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.retrieveBtn);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.retrieveProcLbl);
+            this.Controls.Add(this.clearBtn);
+            this.Controls.Add(this.retrieveProcBtn);
+            this.Controls.Add(this.retrieveProcTextBox);
             this.Name = "UserControl1";
+            this.Size = new System.Drawing.Size(284, 150);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button retrieveBtn;
+        private System.Windows.Forms.TextBox retrieveProcTextBox;
+        private System.Windows.Forms.Button retrieveProcBtn;
+        private System.Windows.Forms.Button clearBtn;
+        private System.Windows.Forms.Label retrieveProcLbl;
     }
 }
