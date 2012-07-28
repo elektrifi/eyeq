@@ -39,6 +39,7 @@ namespace eyeQ
             retrieveProcBtn.Enabled = false;
             clearBtn.Enabled = false;
             textBoxFirstUse = true;
+
         }
 
         public void InitializeServices(int parentWindowHandle)
