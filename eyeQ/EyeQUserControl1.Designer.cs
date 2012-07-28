@@ -44,8 +44,6 @@
             this.retrieveProcTextBox.Name = "retrieveProcTextBox";
             this.retrieveProcTextBox.Size = new System.Drawing.Size(275, 29);
             this.retrieveProcTextBox.TabIndex = 0;
-            this.retrieveProcTextBox.Text = " ...";
-            this.retrieveProcTextBox.TextChanged += new System.EventHandler(this.retrieveProcTextBox_TextChanged);
             // 
             // retrieveProcBtn
             // 

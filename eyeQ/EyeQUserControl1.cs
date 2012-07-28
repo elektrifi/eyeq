@@ -40,6 +40,9 @@ namespace eyeQ
             clearBtn.Enabled = false;
             textBoxFirstUse = true;
 
+            // Put the textbox into primary focus... 
+            retrieveProcTextBox.Focus();
+
             Console.WriteLine("User Control initialized.\r\n");
         }
 
@@ -92,7 +95,7 @@ namespace eyeQ
         void ServiceManager_OnServiceManagerEvent(IPCMessage ipcMessage)
         {
             // Debug
-            Console.WriteLine("ServiceManager_OnServiceManagerEvent...\r\n");
+            //Console.WriteLine("ServiceManager_OnServiceManagerEvent...\r\n");
 
             //What type of message - ASR or Headtracker
 
@@ -132,6 +135,9 @@ namespace eyeQ
             String spokenCommand = "";
             if (spokenCommandObject != null) spokenCommand = spokenCommandObject.ToString();
 
+            // Debug
+            Console.WriteLine("SpokenCommand is... " + spokenCommand);
+
             //We spoke a command. Which one?
             if (spokenCommand.Equals(retrieveProcBtn.Text))
             {
@@ -163,6 +169,10 @@ namespace eyeQ
 
             // Re-enable retrieveProcBtn after completion of call (error OrderedEnumerableRowCollection not)
             retrieveProcBtn.Enabled = true;
+
+            // Put the textbox into primary focus again... 
+            retrieveProcTextBox.Focus();
+
         }
 
         private void retrieveProcTextBox_TextChanged(object sender, EventArgs e)
