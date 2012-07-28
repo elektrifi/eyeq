@@ -1,0 +1,1 @@
+EyeQ Core is the core package containing the User Control, Win32 UI project (for off-device dev/test) and  WinCE project (for on-device dev/test/deploy).

@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eyeQ", "eyeQ\eyeQ.csproj", "{2844CCA0-395C-4655-B8A4-627E9F25410A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4C6D75DE-22B4-4218-8BC0-55A8D6A53438}"
+	ProjectSection(SolutionItems) = preProject
+		LICENCE.md = LICENCE.md
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2844CCA0-395C-4655-B8A4-627E9F25410A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2844CCA0-395C-4655-B8A4-627E9F25410A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2844CCA0-395C-4655-B8A4-627E9F25410A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2844CCA0-395C-4655-B8A4-627E9F25410A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

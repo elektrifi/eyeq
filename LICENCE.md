@@ -1,0 +1,1 @@
+All code in this project is owned and copyrighted (2012) by Mirartech Ltd.
