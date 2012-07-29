@@ -29,7 +29,6 @@ namespace eyeQ
     public partial class EyeQUserControl1 : UserControl
     {
         private int parentWindowHandle; //Handle of Top Level Window
-        private bool textBoxFirstUse;
 
         public EyeQUserControl1()
         {
@@ -64,9 +63,10 @@ namespace eyeQ
             //Register to receive headtracker events
             ServiceManager.HeadtrackerRegister(parentWindowHandle);
 
-            //Use the invoke method to press the Stop Button from the UI thread -this will 
+            //Use the invoke method to press the Start Button from the UI thread -this will 
             //cause the 'Start' button command to be registered with the ASR
-            this.Invoke(new EventHandler(retrieveProcBtn_Click));
+            //this.Invoke(new EventHandler(retrieveProcBtn_Click));
+            this.Invoke(new EventHandler(cancelBtn_Click));
 
         }
 
@@ -147,24 +147,27 @@ namespace eyeQ
 
         private void retrieveProcBtn_Click(object sender, EventArgs e)
         {
-            retrieveProcBtn.Enabled = false;
-            cancelBtn.Enabled = true;
-
-            // Write to console for now (replace with a service in due course)
-            System.Console.WriteLine("You said Retrieve Manual...");
+            retrieveProcBtn.Enabled = true;
+            cancelBtn.Enabled = false;
+            statusLbl.Text = "Retrieving...";
 
             ////////////////
             // Eventually, an outbound service call goes here... 
             ////////////////
+
+            // Now listen for 'Cancel' command
+            ServiceManager.ASRStart(parentWindowHandle, cancelBtn.Text, cancelBtn.Text, "");
         }
 
         private void cancelBtn_Click(object sender, EventArgs e)
         {
-            retrieveProcBtn.Enabled = true;
-            cancelBtn.Enabled = false;
+            retrieveProcBtn.Enabled = false;
+            cancelBtn.Enabled = true;
+            statusLbl.Text = "Cancelling...";
 
-            // Write to console for now (replace with a service in due course)
-            System.Console.WriteLine("You said Cancel...");
+            // Now listen for 'Retrieve Manual' command
+            ServiceManager.ASRStart(parentWindowHandle, retrieveProcBtn.Text, retrieveProcBtn.Text, "");
+
         }
     }
 }

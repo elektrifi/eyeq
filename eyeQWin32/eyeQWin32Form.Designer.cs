@@ -33,17 +33,18 @@
             // 
             // eyeQUserControl11
             // 
-            this.eyeQUserControl11.BackColor = System.Drawing.Color.White;
+            this.eyeQUserControl11.BackColor = System.Drawing.Color.Gainsboro;
+            this.eyeQUserControl11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.eyeQUserControl11.Location = new System.Drawing.Point(0, 0);
             this.eyeQUserControl11.Name = "eyeQUserControl11";
-            this.eyeQUserControl11.Size = new System.Drawing.Size(331, 218);
+            this.eyeQUserControl11.Size = new System.Drawing.Size(536, 219);
             this.eyeQUserControl11.TabIndex = 0;
             // 
             // eyeQForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(332, 219);
+            this.ClientSize = new System.Drawing.Size(536, 219);
             this.Controls.Add(this.eyeQUserControl11);
             this.Name = "eyeQForm";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
