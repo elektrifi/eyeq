@@ -37,12 +37,6 @@ namespace eyeQ
 
             //Disable all buttons until we've joined the services
             retrieveProcBtn.Enabled = false;
-            clearBtn.Enabled = false;
-            textBoxFirstUse = true;
-
-            // Put the textbox into primary focus... 
-            retrieveProcTextBox.Focus();
-
             Console.WriteLine("User Control initialized.\r\n");
         }
 
@@ -131,6 +125,9 @@ namespace eyeQ
         ////////////////////////////////////////////////////////
         void ASRCommandSpoken(object spokenCommandObject, EventArgs e)
         {
+            // Debug
+            Console.WriteLine("ASRCommandSpoken method called.");
+
             //Extract the spoken command, passed as an Object
             String spokenCommand = "";
             if (spokenCommandObject != null) spokenCommand = spokenCommandObject.ToString();
@@ -141,14 +138,9 @@ namespace eyeQ
             //We spoke a command. Which one?
             if (spokenCommand.Equals(retrieveProcBtn.Text))
             {
+                Console.WriteLine("retrieveProcBtn called.");
                 //Call the click method as if we'd actually clicked on the button
                 retrieveProcBtn_Click(null, null);
-            }
-
-            if (spokenCommand.Equals(clearBtn.Text))
-            {
-                //Call the click method as if we'd actually clicked on the button
-                clearBtn_Click(null, null);
             }
         }
 
@@ -157,36 +149,17 @@ namespace eyeQ
             //Now listen for 'Retrieve' command
 
             //Disable retrieveProcBtn (while retrieving)
-            retrieveProcBtn.Enabled = false;
-            clearBtn.Enabled = true;
+            //retrieveProcBtn.Enabled = false;
 
             // Write to console for now (replace with a service in due course)
-            System.Console.WriteLine("RetrieveBtn clicked");
+            System.Console.WriteLine("You said Retrieve Manual...");
 
             ////////////////
             // Service call goes here... 
             ////////////////
 
             // Re-enable retrieveProcBtn after completion of call (error OrderedEnumerableRowCollection not)
-            retrieveProcBtn.Enabled = true;
-
-            // Put the textbox into primary focus again... 
-            retrieveProcTextBox.Focus();
-
-        }
-
-        private void retrieveProcTextBox_TextChanged(object sender, EventArgs e)
-        {
-            // Clear textBox on first use
-            if (textBoxFirstUse) {
-                retrieveProcTextBox.Text = "";
-                textBoxFirstUse = false;
-            }
-        }
-
-        private void clearBtn_Click(object sender, EventArgs e)
-        {
-            retrieveProcTextBox.Text = "";
+            //retrieveProcBtn.Enabled = true;
         }
     }
 }
