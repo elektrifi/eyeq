@@ -35,8 +35,9 @@ namespace eyeQ
         {
             InitializeComponent();
 
-            //Disable all buttons until we've joined the services
-            retrieveProcBtn.Enabled = false;
+            //Disable Cancel button until we've joined the service
+            retrieveProcBtn.Enabled = true;
+            cancelBtn.Enabled = false;
             Console.WriteLine("User Control initialized.\r\n");
         }
 
@@ -146,20 +147,24 @@ namespace eyeQ
 
         private void retrieveProcBtn_Click(object sender, EventArgs e)
         {
-            //Now listen for 'Retrieve' command
-
-            //Disable retrieveProcBtn (while retrieving)
-            //retrieveProcBtn.Enabled = false;
+            retrieveProcBtn.Enabled = false;
+            cancelBtn.Enabled = true;
 
             // Write to console for now (replace with a service in due course)
             System.Console.WriteLine("You said Retrieve Manual...");
 
             ////////////////
-            // Service call goes here... 
+            // Eventually, an outbound service call goes here... 
             ////////////////
+        }
 
-            // Re-enable retrieveProcBtn after completion of call (error OrderedEnumerableRowCollection not)
-            //retrieveProcBtn.Enabled = true;
+        private void cancelBtn_Click(object sender, EventArgs e)
+        {
+            retrieveProcBtn.Enabled = true;
+            cancelBtn.Enabled = false;
+
+            // Write to console for now (replace with a service in due course)
+            System.Console.WriteLine("You said Cancel...");
         }
     }
 }
