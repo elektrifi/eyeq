@@ -68,12 +68,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="eyeQMessageForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="eyeQMessageForm.Designer.cs">
-      <DependentUpon>eyeQMessageForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="eyeQStartForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,9 +76,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="eyeQMessageForm.resx">
-      <DependentUpon>eyeQMessageForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="eyeQStartForm.resx">
       <DependentUpon>eyeQStartForm.cs</DependentUpon>
     </EmbeddedResource>

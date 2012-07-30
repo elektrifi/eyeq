@@ -10,9 +10,9 @@ using eyeQ;
 
 namespace eyeQWin32
 {
-    public partial class eyeQStartForm : Form
+    public partial class eyeQMainForm : Form
     {
-        public eyeQStartForm()
+        public eyeQMainForm()
         {
             InitializeComponent();
             this.CenterToScreen();
@@ -29,7 +29,15 @@ namespace eyeQWin32
         ////////////////////////////////////////////////////////
         private void eyeQForm_Load(object sender, EventArgs e)
         {
+            startPanel.Controls.Clear();
+            startPanel.Visible = true;
+            eyeQUserControl11.Show();
+            eyeQUserControl21.Hide();
+            startPanel.Controls.Add(eyeQUserControl11);
+
+            // Connect to services
             eyeQUserControl11.InitializeServices((int)Handle);
+            eyeQUserControl21.InitializeServices((int)Handle);
         }
 
         ////////////////////////////////////////////////////////
@@ -40,7 +48,9 @@ namespace eyeQWin32
         ////////////////////////////////////////////////////////
         private void eyeQForm_FormClosing(object sender, FormClosingEventArgs e)
         {
+            // Disconnect from services
             eyeQUserControl11.CloseServices();
+            eyeQUserControl21.CloseServices();
         }
      }
 }

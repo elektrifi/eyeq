@@ -15,7 +15,7 @@ namespace eyeQWin32
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new eyeQStartForm());
+            Application.Run(new eyeQMainForm());
         }
     }
 }
