@@ -66,12 +66,21 @@
     <Compile Include="EyeQUserControl1.Designer.cs">
       <DependentUpon>EyeQUserControl1.cs</DependentUpon>
     </Compile>
+    <Compile Include="EyeQUserControl2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EyeQUserControl2.Designer.cs">
+      <DependentUpon>EyeQUserControl2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="EyeQUserControl1.resx">
       <DependentUpon>EyeQUserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EyeQUserControl2.resx">
+      <DependentUpon>EyeQUserControl2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />

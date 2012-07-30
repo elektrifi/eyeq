@@ -29,6 +29,7 @@ namespace eyeQ
     public partial class EyeQUserControl1 : UserControl
     {
         private int parentWindowHandle; //Handle of Top Level Window
+        private bool firstUse = true;
 
         public EyeQUserControl1()
         {
@@ -148,26 +149,35 @@ namespace eyeQ
         private void retrieveProcBtn_Click(object sender, EventArgs e)
         {
             retrieveProcBtn.Enabled = true;
-            cancelBtn.Enabled = false;
+            cancelBtn.Enabled = true;
             statusLbl.Text = "Retrieving...";
 
             ////////////////
             // Eventually, an outbound service call goes here... 
             ////////////////
 
-            // Now listen for 'Cancel' command
+            // Now listen for commands
             ServiceManager.ASRStart(parentWindowHandle, cancelBtn.Text, cancelBtn.Text, "");
+            ServiceManager.ASRStart(parentWindowHandle, retrieveProcBtn.Text, retrieveProcBtn.Text, "");
         }
 
         private void cancelBtn_Click(object sender, EventArgs e)
         {
-            retrieveProcBtn.Enabled = false;
+            retrieveProcBtn.Enabled = true;
             cancelBtn.Enabled = true;
-            statusLbl.Text = "Cancelling...";
-
-            // Now listen for 'Retrieve Manual' command
+            if (firstUse)
+            {
+                statusLbl.Text = "Initialized";
+                firstUse = false;
+            }
+            else
+            {
+                statusLbl.Text = "Cancelling...";
+            }
+         
+            // Now listen for commands
             ServiceManager.ASRStart(parentWindowHandle, retrieveProcBtn.Text, retrieveProcBtn.Text, "");
-
+            ServiceManager.ASRStart(parentWindowHandle, cancelBtn.Text, cancelBtn.Text, "");
         }
     }
 }

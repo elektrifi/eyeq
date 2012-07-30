@@ -10,11 +10,12 @@ using eyeQ;
 
 namespace eyeQWin32
 {
-    public partial class eyeQForm : Form
+    public partial class eyeQStartForm : Form
     {
-        public eyeQForm()
+        public eyeQStartForm()
         {
             InitializeComponent();
+            this.CenterToScreen();
         }
 
        ////////////////////////////////////////////////////////
