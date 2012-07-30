@@ -43,34 +43,35 @@
             this.f2TxtBox.Location = new System.Drawing.Point(20, 16);
             this.f2TxtBox.Multiline = true;
             this.f2TxtBox.Name = "f2TxtBox";
-            this.f2TxtBox.Size = new System.Drawing.Size(741, 140);
+            this.f2TxtBox.Size = new System.Drawing.Size(587, 140);
             this.f2TxtBox.TabIndex = 0;
             this.f2TxtBox.Text = "Testing";
             // 
             // deliverMessageBtn
             // 
             this.deliverMessageBtn.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Regular);
-            this.deliverMessageBtn.Location = new System.Drawing.Point(104, 278);
+            this.deliverMessageBtn.Location = new System.Drawing.Point(20, 273);
             this.deliverMessageBtn.Name = "deliverMessageBtn";
-            this.deliverMessageBtn.Size = new System.Drawing.Size(174, 36);
+            this.deliverMessageBtn.Size = new System.Drawing.Size(173, 36);
             this.deliverMessageBtn.TabIndex = 1;
             this.deliverMessageBtn.Text = "Deliver Message";
             // 
             // messageGoBackBtn
             // 
             this.messageGoBackBtn.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Regular);
-            this.messageGoBackBtn.Location = new System.Drawing.Point(500, 278);
+            this.messageGoBackBtn.Location = new System.Drawing.Point(434, 273);
             this.messageGoBackBtn.Name = "messageGoBackBtn";
-            this.messageGoBackBtn.Size = new System.Drawing.Size(174, 36);
+            this.messageGoBackBtn.Size = new System.Drawing.Size(173, 36);
             this.messageGoBackBtn.TabIndex = 2;
             this.messageGoBackBtn.Text = "Go Back";
+            this.messageGoBackBtn.Click += new System.EventHandler(this.messageGoBackBtn_Click);
             // 
             // clearMessageBtn
             // 
             this.clearMessageBtn.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Regular);
-            this.clearMessageBtn.Location = new System.Drawing.Point(294, 278);
+            this.clearMessageBtn.Location = new System.Drawing.Point(221, 273);
             this.clearMessageBtn.Name = "clearMessageBtn";
-            this.clearMessageBtn.Size = new System.Drawing.Size(187, 36);
+            this.clearMessageBtn.Size = new System.Drawing.Size(186, 36);
             this.clearMessageBtn.TabIndex = 3;
             this.clearMessageBtn.Text = "Clear Message";
             // 
@@ -84,7 +85,7 @@
             this.AdresseeComboBox.Items.Add("Jonathan Forbes");
             this.AdresseeComboBox.Location = new System.Drawing.Point(124, 208);
             this.AdresseeComboBox.Name = "AdresseeComboBox";
-            this.AdresseeComboBox.Size = new System.Drawing.Size(637, 29);
+            this.AdresseeComboBox.Size = new System.Drawing.Size(483, 29);
             this.AdresseeComboBox.TabIndex = 4;
             // 
             // f2ToBtn
@@ -108,7 +109,7 @@
             this.Controls.Add(this.deliverMessageBtn);
             this.Controls.Add(this.f2TxtBox);
             this.Name = "EyeQUserControl2";
-            this.Size = new System.Drawing.Size(781, 560);
+            this.Size = new System.Drawing.Size(624, 442);
             this.ResumeLayout(false);
 
         }

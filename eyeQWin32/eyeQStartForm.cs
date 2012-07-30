@@ -15,6 +15,14 @@ namespace eyeQWin32
         public eyeQMainForm()
         {
             InitializeComponent();
+
+            startPanel.Controls.Clear();
+            startPanel.Visible = true;
+            eyeQUserControl11.Show();
+            eyeQUserControl21.Hide();
+            startPanel.Controls.Add(eyeQUserControl11);
+            startPanel.Controls.Add(eyeQUserControl21);           
+
             this.CenterToScreen();
         }
 
@@ -29,16 +37,19 @@ namespace eyeQWin32
         ////////////////////////////////////////////////////////
         private void eyeQForm_Load(object sender, EventArgs e)
         {
-            startPanel.Controls.Clear();
-            startPanel.Visible = true;
-            eyeQUserControl11.Show();
-            eyeQUserControl21.Hide();
-            startPanel.Controls.Add(eyeQUserControl11);
-
             // Connect to services
             eyeQUserControl11.InitializeServices((int)Handle);
-            eyeQUserControl21.InitializeServices((int)Handle);
+            //eyeQUserControl21.InitializeServices((int)Handle);
         }
+        
+        //public void eyeQForm_Start(object sender, EventArgs e)
+        //{
+            //startPanel.Controls.Clear();
+            //startPanel.Visible = true;
+            //eyeQUserControl21.Hide();
+            //eyeQUserControl11.Show();
+            //startPanel.Controls.Add(eyeQUserControl11);
+        //}
 
         ////////////////////////////////////////////////////////
         //
@@ -50,7 +61,7 @@ namespace eyeQWin32
         {
             // Disconnect from services
             eyeQUserControl11.CloseServices();
-            eyeQUserControl21.CloseServices();
+            //eyeQUserControl21.CloseServices();
         }
      }
 }

@@ -140,5 +140,10 @@ namespace eyeQ
                 //showManualsBtn_Click(null, null);
             }
         }
+
+        private void messageGoBackBtn_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

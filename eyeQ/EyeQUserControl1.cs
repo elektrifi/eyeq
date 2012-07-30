@@ -151,9 +151,9 @@ namespace eyeQ
             ////////////////
 
             // Now listen for commands
-            ServiceManager.ASRStart(parentWindowHandle, cancelBtn.Text, cancelBtn.Text, "");
+            //ServiceManager.ASRStart(parentWindowHandle, cancelBtn.Text, cancelBtn.Text, "");
             ServiceManager.ASRStart(parentWindowHandle, showManualsBtn.Text, showManualsBtn.Text, "");
-            ServiceManager.ASRStart(parentWindowHandle, composeMessageBtn.Text, composeMessageBtn.Text, "");
+            //ServiceManager.ASRStart(parentWindowHandle, composeMessageBtn.Text, composeMessageBtn.Text, "");
         }
 
         private void cancelBtn_Click(object sender, EventArgs e)
@@ -179,6 +179,7 @@ namespace eyeQ
         private void composeMessageBtn_Click(object sender, EventArgs e)
         {
             statusLbl.Text = "Compose message";
+            
         }
     }
 }

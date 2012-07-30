@@ -39,16 +39,17 @@
             // showManualsBtn
             // 
             this.showManualsBtn.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Regular);
-            this.showManualsBtn.Location = new System.Drawing.Point(160, 200);
+            this.showManualsBtn.Location = new System.Drawing.Point(88, 213);
             this.showManualsBtn.Name = "showManualsBtn";
             this.showManualsBtn.Size = new System.Drawing.Size(208, 39);
             this.showManualsBtn.TabIndex = 1;
             this.showManualsBtn.Text = "Show Manuals";
+            this.showManualsBtn.Click += new System.EventHandler(this.showManualsBtn_Click);
             // 
             // eyeQLogo
             // 
             this.eyeQLogo.Image = ((System.Drawing.Image)(resources.GetObject("eyeQLogo.Image")));
-            this.eyeQLogo.Location = new System.Drawing.Point(252, 57);
+            this.eyeQLogo.Location = new System.Drawing.Point(180, 70);
             this.eyeQLogo.Name = "eyeQLogo";
             this.eyeQLogo.Size = new System.Drawing.Size(276, 50);
             this.eyeQLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -56,7 +57,7 @@
             // cancelBtn
             // 
             this.cancelBtn.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Regular);
-            this.cancelBtn.Location = new System.Drawing.Point(409, 200);
+            this.cancelBtn.Location = new System.Drawing.Point(337, 213);
             this.cancelBtn.Name = "cancelBtn";
             this.cancelBtn.Size = new System.Drawing.Size(208, 39);
             this.cancelBtn.TabIndex = 2;
@@ -68,7 +69,7 @@
             this.statusLbl.BackColor = System.Drawing.Color.Transparent;
             this.statusLbl.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Regular);
             this.statusLbl.ForeColor = System.Drawing.Color.Black;
-            this.statusLbl.Location = new System.Drawing.Point(282, 137);
+            this.statusLbl.Location = new System.Drawing.Point(210, 150);
             this.statusLbl.Name = "statusLbl";
             this.statusLbl.Size = new System.Drawing.Size(215, 32);
             this.statusLbl.Text = "...";
@@ -77,11 +78,12 @@
             // composeMessageBtn
             // 
             this.composeMessageBtn.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Regular);
-            this.composeMessageBtn.Location = new System.Drawing.Point(160, 257);
+            this.composeMessageBtn.Location = new System.Drawing.Point(88, 270);
             this.composeMessageBtn.Name = "composeMessageBtn";
             this.composeMessageBtn.Size = new System.Drawing.Size(208, 39);
             this.composeMessageBtn.TabIndex = 3;
             this.composeMessageBtn.Text = "Compose Message";
+            this.composeMessageBtn.Click += new System.EventHandler(this.composeMessageBtn_Click);
             // 
             // EyeQUserControl1
             // 
@@ -94,7 +96,7 @@
             this.Controls.Add(this.eyeQLogo);
             this.Controls.Add(this.showManualsBtn);
             this.Name = "EyeQUserControl1";
-            this.Size = new System.Drawing.Size(800, 580);
+            this.Size = new System.Drawing.Size(640, 480);
             this.ResumeLayout(false);
 
         }
