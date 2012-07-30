@@ -33,6 +33,7 @@
             this.eyeQLogo = new System.Windows.Forms.PictureBox();
             this.cancelBtn = new System.Windows.Forms.Button();
             this.statusLbl = new System.Windows.Forms.Label();
+            this.f1GotoMessageBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // retrieveProcBtn
@@ -74,11 +75,21 @@
             this.statusLbl.Text = "...";
             this.statusLbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // f1GotoMessageBtn
+            // 
+            this.f1GotoMessageBtn.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Regular);
+            this.f1GotoMessageBtn.Location = new System.Drawing.Point(160, 257);
+            this.f1GotoMessageBtn.Name = "f1GotoMessageBtn";
+            this.f1GotoMessageBtn.Size = new System.Drawing.Size(208, 39);
+            this.f1GotoMessageBtn.TabIndex = 4;
+            this.f1GotoMessageBtn.Text = "Send Message";
+            // 
             // EyeQUserControl1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.f1GotoMessageBtn);
             this.Controls.Add(this.statusLbl);
             this.Controls.Add(this.cancelBtn);
             this.Controls.Add(this.eyeQLogo);
@@ -95,5 +106,6 @@
         private System.Windows.Forms.PictureBox eyeQLogo;
         private System.Windows.Forms.Button cancelBtn;
         private System.Windows.Forms.Label statusLbl;
+        private System.Windows.Forms.Button f1GotoMessageBtn;
     }
 }

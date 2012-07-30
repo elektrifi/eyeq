@@ -36,6 +36,7 @@
             // 
             // f2TxtBox
             // 
+            this.f2TxtBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.f2TxtBox.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Regular);
             this.f2TxtBox.Location = new System.Drawing.Point(20, 16);
             this.f2TxtBox.Multiline = true;
@@ -47,7 +48,7 @@
             // f2SendTextBtn
             // 
             this.f2SendTextBtn.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Regular);
-            this.f2SendTextBtn.Location = new System.Drawing.Point(238, 176);
+            this.f2SendTextBtn.Location = new System.Drawing.Point(231, 177);
             this.f2SendTextBtn.Name = "f2SendTextBtn";
             this.f2SendTextBtn.Size = new System.Drawing.Size(96, 36);
             this.f2SendTextBtn.TabIndex = 1;
@@ -56,7 +57,7 @@
             // f2GoBackBtn
             // 
             this.f2GoBackBtn.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Regular);
-            this.f2GoBackBtn.Location = new System.Drawing.Point(488, 176);
+            this.f2GoBackBtn.Location = new System.Drawing.Point(481, 177);
             this.f2GoBackBtn.Name = "f2GoBackBtn";
             this.f2GoBackBtn.Size = new System.Drawing.Size(96, 36);
             this.f2GoBackBtn.TabIndex = 2;
@@ -65,7 +66,7 @@
             // f2ClearTextBtn
             // 
             this.f2ClearTextBtn.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Regular);
-            this.f2ClearTextBtn.Location = new System.Drawing.Point(357, 176);
+            this.f2ClearTextBtn.Location = new System.Drawing.Point(350, 177);
             this.f2ClearTextBtn.Name = "f2ClearTextBtn";
             this.f2ClearTextBtn.Size = new System.Drawing.Size(109, 36);
             this.f2ClearTextBtn.TabIndex = 3;
@@ -75,6 +76,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.f2ClearTextBtn);
             this.Controls.Add(this.f2GoBackBtn);
             this.Controls.Add(this.f2SendTextBtn);
