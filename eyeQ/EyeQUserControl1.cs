@@ -34,17 +34,12 @@ namespace eyeQ
         public EyeQUserControl1()
         {
             InitializeComponent();
-
-            //Disable Cancel button until we've joined the service
-            retrieveProcBtn.Enabled = true;
-            cancelBtn.Enabled = false;
-            Console.WriteLine("User Control initialized.\r\n");
         }
 
         public void InitializeServices(int parentWindowHandle)
         {
             // Debug
-            Console.WriteLine("Connecting to services...\r\n");
+            Console.WriteLine("Connecting to services...\n");
 
             //Store the parent handle for later use
             this.parentWindowHandle = parentWindowHandle;
@@ -57,7 +52,7 @@ namespace eyeQ
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Unable to Initialize Golden-i Services\r\n" + ex.Message);
+                MessageBox.Show("Unable to initialize Golden-i Services\r\n" + ex.Message);
                 return;
             }
 
@@ -66,7 +61,6 @@ namespace eyeQ
 
             //Use the invoke method to press the Start Button from the UI thread -this will 
             //cause the 'Start' button command to be registered with the ASR
-            //this.Invoke(new EventHandler(retrieveProcBtn_Click));
             this.Invoke(new EventHandler(cancelBtn_Click));
 
         }
@@ -128,29 +122,29 @@ namespace eyeQ
         void ASRCommandSpoken(object spokenCommandObject, EventArgs e)
         {
             // Debug
-            Console.WriteLine("ASRCommandSpoken method called.");
+            //Console.WriteLine("ASRCommandSpoken method called.");
 
             //Extract the spoken command, passed as an Object
             String spokenCommand = "";
             if (spokenCommandObject != null) spokenCommand = spokenCommandObject.ToString();
 
             // Debug
-            Console.WriteLine("SpokenCommand is... " + spokenCommand);
+            //Console.WriteLine("SpokenCommand is... " + spokenCommand);
 
             //We spoke a command. Which one?
-            if (spokenCommand.Equals(retrieveProcBtn.Text))
+            if (spokenCommand.Equals(showManualsBtn.Text))
             {
-                Console.WriteLine("retrieveProcBtn called.");
+                Console.WriteLine("showManualsBtn called.");
                 //Call the click method as if we'd actually clicked on the button
-                retrieveProcBtn_Click(null, null);
+                showManualsBtn_Click(null, null);
             }
         }
 
-        private void retrieveProcBtn_Click(object sender, EventArgs e)
+        private void showManualsBtn_Click(object sender, EventArgs e)
         {
-            retrieveProcBtn.Enabled = true;
+            showManualsBtn.Enabled = true;
             cancelBtn.Enabled = true;
-            statusLbl.Text = "Retrieving...";
+            statusLbl.Text = "Showing manuals...";
 
             ////////////////
             // Eventually, an outbound service call goes here... 
@@ -158,12 +152,13 @@ namespace eyeQ
 
             // Now listen for commands
             ServiceManager.ASRStart(parentWindowHandle, cancelBtn.Text, cancelBtn.Text, "");
-            ServiceManager.ASRStart(parentWindowHandle, retrieveProcBtn.Text, retrieveProcBtn.Text, "");
+            ServiceManager.ASRStart(parentWindowHandle, showManualsBtn.Text, showManualsBtn.Text, "");
+            ServiceManager.ASRStart(parentWindowHandle, composeMessageBtn.Text, composeMessageBtn.Text, "");
         }
 
         private void cancelBtn_Click(object sender, EventArgs e)
         {
-            retrieveProcBtn.Enabled = true;
+            showManualsBtn.Enabled = true;
             cancelBtn.Enabled = true;
             if (firstUse)
             {
@@ -176,8 +171,14 @@ namespace eyeQ
             }
          
             // Now listen for commands
-            ServiceManager.ASRStart(parentWindowHandle, retrieveProcBtn.Text, retrieveProcBtn.Text, "");
+            ServiceManager.ASRStart(parentWindowHandle, showManualsBtn.Text, showManualsBtn.Text, "");
             ServiceManager.ASRStart(parentWindowHandle, cancelBtn.Text, cancelBtn.Text, "");
+            ServiceManager.ASRStart(parentWindowHandle, composeMessageBtn.Text, composeMessageBtn.Text, "");
+        }
+
+        private void composeMessageBtn_Click(object sender, EventArgs e)
+        {
+            statusLbl.Text = "Compose message";
         }
     }
 }

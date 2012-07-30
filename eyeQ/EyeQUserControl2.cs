@@ -15,5 +15,10 @@ namespace eyeQ
         {
             InitializeComponent();
         }
+
+        private void f2SendTextBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
